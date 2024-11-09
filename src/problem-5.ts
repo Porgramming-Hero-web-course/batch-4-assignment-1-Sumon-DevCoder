@@ -1,4 +1,7 @@
 // Problem 5:
-const getProperty = (obj, name) => {};
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
 
-// Problem 6:
+// const person = { name: "Alice", age: 30 };
+// console.log(getProperty(person, "name"));
